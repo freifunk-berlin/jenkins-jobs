@@ -23,5 +23,5 @@ elif [ $BUILD_TYPE = "stable" ] ; then
 	MAKE_OPTIONS="VERSION_REPO=$VERSION_REPO"
 fi
 
-make -j8 TARGET=${ARCH} clean || true
-make -j8 TARGET=${ARCH} ${MAKE_OPTIONS}
+make -j8 TARGET=${ARCH} BUILD_LOG=1 clean || true
+make -j8 TARGET=${ARCH} ${MAKE_OPTIONS} BUILD_LOG=1

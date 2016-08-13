@@ -1,9 +1,4 @@
 ---
-- project:
-    name: lede
-    jobs:
-      - 'freifunk-firmware'
-
 - job:
     name: 'firmware-firmware-pull-request'
     project-type: freestyle

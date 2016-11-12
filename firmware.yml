@@ -31,35 +31,35 @@
         - project:
             - freifunk-firmware
           predefined-parameters: |
-              BUILD_TYPE=unstable
+              UPLOAD_DIR=unstable/${BUILD_NUMBER}
               ARCH=ar71xx
               GIT_BRANCH=${ghprbActualCommit}
               GIT_REFSPEC=+refs/pull/*:refs/remotes/origin/pr/*
         - project:
             - freifunk-firmware
           predefined-parameters: |
-              BUILD_TYPE=unstable
+              UPLOAD_DIR=unstable/${BUILD_NUMBER}
               ARCH=ar71xx_mikrotik
               GIT_BRANCH=${ghprbActualCommit}
               GIT_REFSPEC=+refs/pull/*:refs/remotes/origin/pr/*
         - project:
             - freifunk-firmware
           predefined-parameters: |
-              BUILD_TYPE=unstable
+              UPLOAD_DIR=unstable/${BUILD_NUMBER}
               ARCH=mpc85xx
               GIT_BRANCH=${ghprbActualCommit}
               GIT_REFSPEC=+refs/pull/*:refs/remotes/origin/pr/*
         - project:
             - freifunk-firmware
           predefined-parameters: |
-              BUILD_TYPE=unstable
+              UPLOAD_DIR=unstable/${BUILD_NUMBER}
               ARCH=ramips
               GIT_BRANCH=${ghprbActualCommit}
               GIT_REFSPEC=+refs/pull/*:refs/remotes/origin/pr/*
         - project:
             - freifunk-firmware
           predefined-parameters: |
-              BUILD_TYPE=unstable
+              UPLOAD_DIR=unstable/${BUILD_NUMBER}
               ARCH=x86
               GIT_BRANCH=${ghprbActualCommit}
               GIT_REFSPEC=+refs/pull/*:refs/remotes/origin/pr/*
@@ -103,10 +103,6 @@
           name: ARCH
           default: ar71xx_generic
           description: "Build for this architecture. E.g. ar71xx_generic"
-      - string:
-          name: BUILD_TYPE
-          default: unstable
-          description: "One in [stable, unstable, weekly]"
       - string:
           name: GIT_REFSPEC
           default: "master"

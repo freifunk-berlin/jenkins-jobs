@@ -89,10 +89,10 @@
                 scanner: 'GNU Make + GNU C Compiler (gcc)'
             run-always: true
             only-use-stable-builds-as-reference: true
-      - ssh:
-          site: 'freifunk'
-          target: '${UPLOAD_DIR}'
-          source: 'firmwares/'
+        - ssh:
+            site: 'freifunk'
+            target: '${UPLOAD_DIR}'
+            source: 'firmwares/'
     properties:
       - github:
           url: https://github.com/lynxis/firmware

@@ -90,9 +90,9 @@
             run-always: true
             only-use-stable-builds-as-reference: true
       - ssh:
-          site: 'freifunk-unstable'
+          site: 'freifunk'
           target: '${UPLOAD_DIR}'
-          source: 'build/coreboot.rom'
+          source: 'firmwares/'
     properties:
       - github:
           url: https://github.com/lynxis/firmware
@@ -113,4 +113,8 @@
           name: GIT_BRANCH
           default: "master"
           description: "The branch to built. Can be also a commit."
+      - string:
+          name: UPLOAD_DIR
+          default: "unstable/manual-${BUILD_NUMBER}"
+          description: "Under which name the resulting build is uploaded"
 

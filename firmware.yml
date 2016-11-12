@@ -19,7 +19,7 @@
         - github-pull-request:
             github-hooks: true
             permit-all: false
-            org-list: 
+            org-list:
               - firmware-berlin
     publishers:
         - github-notifier
@@ -76,9 +76,10 @@
           !include-raw: freifunk-firmware.sh
     scm:
       - git:
-          url: https://github.com/lynxis/firmware
+          url: https://github.com/freifunk-berlin/firmware
           branches:
-            - origin/master
+            - ${GIT_BRANCH}
+          refspec: ${GIT_REFSPEC}
           wipe-workspace: false
           git-config-name: 'Jenkins Builder'
           git-config-email: 'admax@fe80.eu'
@@ -93,13 +94,14 @@
             site: 'freifunk'
             target: '${UPLOAD_DIR}'
             source: 'firmwares/'
+        - github-notifier
     properties:
       - github:
-          url: https://github.com/lynxis/firmware
+          url: https://github.com/freifunk-berlin/firmware
     parameters:
       - string:
           name: ARCH
-          default: ar71xx
+          default: ar71xx_generic
           description: "Build for this architecture. E.g. ar71xx_generic"
       - string:
           name: BUILD_TYPE
@@ -107,7 +109,7 @@
           description: "One in [stable, unstable, weekly]"
       - string:
           name: GIT_REFSPEC
-          default: ""
+          default: "master"
           description: "The exact revspec to fetch. Empty is also possible"
       - string:
           name: GIT_BRANCH
@@ -117,4 +119,3 @@
           name: UPLOAD_DIR
           default: "unstable/manual-${BUILD_NUMBER}"
           description: "Under which name the resulting build is uploaded"
-

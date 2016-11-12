@@ -1,0 +1,5 @@
+[jenkins]
+user=your_user_name
+password=apitokenfromjenkins
+url=https://jenkins.fe80.eu
+query_plugins_info=False

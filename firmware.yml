@@ -42,21 +42,28 @@
           git-revision: true
           predefined-parameters: |
               UPLOAD_DIR=unstable/${BUILD_NUMBER}
-              ARCH=mpc85xx
+              ARCH=mpc85xx_generic
           block: true
         - project:
             - freifunk-firmware
           git-revision: true
           predefined-parameters: |
               UPLOAD_DIR=unstable/${BUILD_NUMBER}
-              ARCH=ramips
+              ARCH=ramips_mt7620
           block: true
         - project:
             - freifunk-firmware
           git-revision: true
           predefined-parameters: |
               UPLOAD_DIR=unstable/${BUILD_NUMBER}
-              ARCH=x86
+              ARCH=ramips_mt7621
+          block: true
+        - project:
+            - freifunk-firmware
+          git-revision: true
+          predefined-parameters: |
+              UPLOAD_DIR=unstable/${BUILD_NUMBER}
+              ARCH=x86_generic
           block: true
 
 - job:

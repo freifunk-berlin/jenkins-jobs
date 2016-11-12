@@ -89,6 +89,10 @@
                 scanner: 'GNU Make + GNU C Compiler (gcc)'
             run-always: true
             only-use-stable-builds-as-reference: true
+      - ssh:
+          site: 'freifunk-unstable'
+          target: '${UPLOAD_DIR}'
+          source: 'build/coreboot.rom'
     properties:
       - github:
           url: https://github.com/lynxis/firmware

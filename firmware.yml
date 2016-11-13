@@ -85,7 +85,7 @@
     publishers:
         - warnings:
             workspace-file-scanners:
-              - file-pattern: 'openwrt/logs/**'
+              - file-pattern: 'lede/logs/**'
                 scanner: 'GNU Make + GNU C Compiler (gcc)'
             run-always: true
             only-use-stable-builds-as-reference: true

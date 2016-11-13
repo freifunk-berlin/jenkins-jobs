@@ -92,7 +92,8 @@
         - ssh:
             site: 'freifunk'
             target: '${UPLOAD_DIR}'
-            source: 'firmwares/'
+            source: 'firmwares/**'
+            remove-prefix: 'firmwares'
         - github-notifier
     properties:
       - github:

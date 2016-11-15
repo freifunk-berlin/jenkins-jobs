@@ -13,7 +13,8 @@
           wipe-workspace: false
           git-config-name: 'Jenkins Builder'
           git-config-email: 'admax@fe80.eu'
-          refspec: '+refs/remotes/origin/lede*'
+          branches:
+            - 'lede*'
     triggers:
       - github:
         github-hooks: true

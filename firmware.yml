@@ -79,7 +79,6 @@
     scm:
       - git:
           url: https://github.com/freifunk-berlin/firmware
-          # wipe-workspace: false
           git-config-name: 'Jenkins Builder'
           git-config-email: 'admax@fe80.eu'
     publishers:
